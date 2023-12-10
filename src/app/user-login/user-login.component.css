@@ -1,14 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 .container{
-    display: flex;  
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    background-image: url("https://history-computer.com/wp-content/uploads/2023/01/shutterstock_2093652733-2048x1247.jpg");
+    min-height: 100vh;
+    background: linear-gradient(90deg, #a8dab5, rgba(0, 0, 0, 0.12));
+    /* background-image: url("https://history-computer.com/wp-content/uploads/2023/01/shutterstock_2093652733-2048x1247.jpg"); */
 }
 .mat-card{
     width: 25%;
+    background: linear-gradient(90deg, #fff, #78b8b0);
+    position: relative;
+    height: 320px;
+    width: 360px;
+    box-shadow: 0px 0px 24px #5C5696;
     
 }
 .mat-form-field{
     width: 350px;
+    z-index: 1;
+	position: relative;	
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;	
+	font-family: Raleway, sans-serif;
+}
+.mat-form-field
+{	
+    /* border: 2px solid #d1d4d4; */
+	/* border-bottom: 2px solid #d1d4d4; */
+	background: none;
+	padding: 2px;   
+	padding-left: 24px;
+	font-weight: 700;
+	width: 75%;
+	transition: .2s;
+
+}
+.mat-card:active,
+.mat-card:focus,
+.mat-card:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+.button_login {
+    /* background: #fff; */
+    font-size: 14px;
+    margin-top: 22px;
+    padding: 3px 18px;
+    border-radius: 19px;
+    border: 1px solid #D4D3E8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 25%;
+    color: #4C489D;
+    box-shadow: 0px 2px 2px #5C5696;
+    cursor: pointer;
+    transition: .2s;
 }
