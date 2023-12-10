@@ -55,13 +55,15 @@ export class UserLoginComponent implements OnInit {
         if (user) {
           alert('Login Succesful');
           this.AdminLoginForm.reset()
+          this.route.navigate(['/employee/emplist']);
           // this.route.navigate(["home"])
         } else {
           alert("user not found")
         }
       }, err => {
         alert("Something went wrong")
-      })
+      },
+      )
     // const AdminLogin = res.find((a: any) => {
     //   if(a.Email === this.AdminLoginForm.value.Email && a.Password === this.AdminLoginForm.value.Password){
     //     return

@@ -17,6 +17,30 @@
       "id": 1
     }
   ],
+  "empList": [
+    {
+      "empName": "Vamshi Krishna",
+      "email": "Manukondavamshi26@gmail.com",
+      "password": "Manu@0126",
+      "mobileNO": 9398894863,
+      "gender": "Male",
+      "category": "SoftwareDeveloper",
+      "date": "1997-01-25T18:30:00.000Z",
+      "comment": "",
+      "id": 1
+    },
+    {
+      "empName": "Ravali",
+      "email": "RavaliChowdary@gmail.com",
+      "password": "RVALI",
+      "mobileNO": 9888963525,
+      "gender": "Female",
+      "category": "SoftwareDeveloper",
+      "date": "1999-11-05T18:30:00.000Z",
+      "comment": "",
+      "id": 2
+    }
+  ],
   "employeeData": [
     {
       "FirstName": "Lokesh",

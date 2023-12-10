@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+mat-toolbar button{
+  margin:5px
+}
+.mat-elevation-z8{
+  width: 90%;
+  margin-left: 70px;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .hide{
+    display: none;
+  }
+  mat-footer-row mat-footer-cell{
+    justify-content: center;
+    font-style: italic;
+  }
+  .mySearch{
+    margin:10px;
+  }
+  .mySerachFormfield{
+    width: 60%;
+    margin-left: 10px;
+    padding:5px 10px;
+    background-color: #ffff;
+    color: red;
+    font-weight: bolder;
+  }
+  #ne{
+    background-color: #00cbff99;
+  }
+  /* sidenav */
+  .example-container{
+    width: 200px;
+    height: 1000px;
+    margin: 10px;
+    border: 1px solid #555;
+  }

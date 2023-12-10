@@ -1,0 +1,77 @@
+
+<h1>Add Employee</h1>
+<form [formGroup]="empForm">
+    <mat-grid-list cols="2" rowHeight="400px">
+        <mat-grid-tile>
+            <div class="empControls">
+                <mat-form-field appearance="outline">
+                    <mat-label>EmployeeName</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="empName" required>
+                    <mat-error *ngIf="f['empName'].errors?.['required']">name is required</mat-error>
+                    <mat-error *ngIf="f['empName'].errors?.['minlength']">min 3 char</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email" placeholder="Placeholder" required>
+                    <mat-error *ngIf="f['email'].errors?.['required']">email is required</mat-error>
+                    <mat-error *ngIf="f['email'].errors?.['email']">email is not valid</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password" placeholder="Placeholder" required>
+                    <mat-error>password is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>MObileNo</mat-label>
+                    <input matInput type="number" formControlName="mobileNO" placeholder="Placeholder" required>
+                    <mat-error *ngIf="f['mobileNO'].errors?.['required']">mobile no is required</mat-error>
+                    <mat-error *ngIf="f['mobileNO'].errors?.['minlength']">min 10 no</mat-error>
+                </mat-form-field>
+            </div>
+
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <div class="empControls">
+                <mat-radio-group class="exradio" formControlName="gender" aria-label="Select an option">
+                    <mat-radio-button *ngFor="let gender of genderlist" [value]="gender">{{gender}}</mat-radio-button>
+                </mat-radio-group>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>emp Category</mat-label>
+                    <mat-select formControlName="category" required>
+                        <mat-option>none</mat-option>
+                        <ng-container *ngFor="let category of empCategory">
+                            <mat-option value="{{category}}">{{category}}</mat-option>
+                        </ng-container>
+                    </mat-select>
+                    <mat-error *ngIf="f['category'].errors?.['required']">please choose an department</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="date">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Comment</mat-label>
+                    <textarea matInput formControlName="comment"></textarea>
+                </mat-form-field>
+
+                <div mat-dialog-action [align]="'end'" class="buttonRow">
+                    <button type="submit" mat-raised-button mat-dialog-close color="warn">Close</button>
+                    <button mat-raised-button color="primary"  (click)="addEmp()">{{ActionBtn}}</button>
+                </div>
+
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>
+<!-- {{empForm.value | json}} -->

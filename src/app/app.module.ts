@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { angularMaterialModule } from 'src/Angular-Material/angular-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginService } from './services/login.service';
+import { DeleteDialogComponent } from './delete-dialog/delete-dialog.component';
+import { EmployeeDataModule } from './employee-data/employee-data.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { LoginService } from './services/login.service';
     UserSignUpComponent,
     UserLoginComponent,
     EmployeeDetailsComponent,
+    DeleteDialogComponent,
     
 
   ],
@@ -27,7 +30,8 @@ import { LoginService } from './services/login.service';
     angularMaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    EmployeeDataModule
     
   ],
   providers: [LoginService],
