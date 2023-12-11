@@ -8,9 +8,9 @@
   ],
   "adminData": [
     {
-      "FirstName": "Lokeswar",
-      "LastName": "sangam",
-      "Email": "lokeswar@gmail.com",
+      "FirstName": "Vamshi",
+      "LastName": "Krishna",
+      "Email": "Krishna@gmail.com",
       "Password": "1234",
       "ConfirmPassword": "1234",
       "Terms&Conditions": "",
@@ -20,25 +20,35 @@
   "empList": [
     {
       "empName": "Vamshi Krishna",
-      "email": "Manukondavamshi26@gmail.com",
+      "email": "vamshi26@gmail.com",
       "password": "Manu@0126",
       "mobileNO": 9398894863,
       "gender": "Male",
       "category": "SoftwareDeveloper",
-      "date": "1997-01-25T18:30:00.000Z",
-      "comment": "",
+      "Taskstatus": "InProgress",
       "id": 1
     },
     {
-      "empName": "Ravali",
-      "email": "RavaliChowdary@gmail.com",
-      "password": "RVALI",
-      "mobileNO": 9888963525,
-      "gender": "Female",
+      "empName": "Shashee",
+      "email": "shashee@gmail.com",
+      "password": "1234",
+      "mobileNO": 9951202151,
+      "gender": "Male",
       "category": "SoftwareDeveloper",
-      "date": "1999-11-05T18:30:00.000Z",
-      "comment": "",
+      "Taskstatus": "Assigned",
+      "comment": "Asian",
       "id": 2
+    },
+    {
+      "empName": "Ramya",
+      "email": "Ramya@gmail.com",
+      "password": "Ram123",
+      "mobileNO": 9655532625,
+      "gender": "Male",
+      "category": "SoftwareDeveloper",
+      "Taskstatus": "Completed",
+      "Task": "Work done...",
+      "id": 3
     }
   ],
   "employeeData": [

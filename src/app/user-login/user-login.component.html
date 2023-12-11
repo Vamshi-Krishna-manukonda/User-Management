@@ -1,5 +1,6 @@
-<div class="container">
-    <mat-card>
+<!-- <div class="container">
+
+< <mat-card>
         <mat-card-title>
             <div class="header">
                 <h1>AdminLogin</h1>
@@ -7,7 +8,7 @@
         </mat-card-title>
         <mat-card-content>
             <form [formGroup]="AdminLoginForm">
-                <!-- <ng-container *ngFor="let control of  admLoginDynamicArray">
+                <ng-container *ngFor="let control of  admLoginDynamicArray">
                     <div [ngSwitch]="control.Type" class="col-md-6">
                         <mat-form-field *ngSwitchCase="'input'" appearance="outline">
                             <mat-label>{{control.Label}}</mat-label>
@@ -15,7 +16,7 @@
                         </mat-form-field>
                     </div>
                 </ng-container> -->
-                <div>
+<!-- <div>
                     <mat-form-field appearance="outline">
                         <mat-label>Email</mat-label>
                         <input matInput type="email" formControlName="email" placeholder="Placeholder" required>
@@ -23,17 +24,62 @@
                         <mat-error *ngIf="f['email'].errors?.['email']">email is not valid</mat-error>
                     </mat-form-field>
                 </div>
-<div>
+                <div>
 
-    <mat-form-field appearance="outline">
-        <mat-label>Password</mat-label>
-        <input matInput type="password" formControlName="password" placeholder="Placeholder" required>
-        <mat-error>password is required</mat-error>
-    </mat-form-field>
-</div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" formControlName="password" placeholder="Placeholder" required>
+                        <mat-error>password is required</mat-error>
+                    </mat-form-field>
+                </div>
                 <button type="submit" class="button_login" mat-button color="primary" (click)="Login()">Login</button>
-                <!-- <a routerLink="/adminRegister">New Admin</a> -->
             </form>
         </mat-card-content>
-    </mat-card>
+    </mat-card> -->
+<!-- </div> -->
+<div class="container">
+    <div class="screen">
+        <div class="screen__content">
+            <!-- <mat-card> -->
+            <mat-card-title>
+                    <div class="header">
+                        <h2>Login</h2>
+                    </div>
+                </mat-card-title>
+            <div class="login-Box">
+                <form [formGroup]="AdminLoginForm">
+                    <!-- <ng-container *ngFor="let control of  admLoginDynamicArray">
+                    <div [ngSwitch]="control.Type" class="col-md-6">
+                        <mat-form-field *ngSwitchCase="'input'" appearance="outline">
+                            <mat-label>{{control.Label}}</mat-label>
+                            <input matInput [type]="control.type" [formControlName]="control.ID">
+                        </mat-form-field>
+                    </div>
+                </ng-container> -->
+                    <div class="input">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="email" formControlName="email" placeholder="Placeholder" required>
+                            <mat-error *ngIf="f['email'].errors?.['required']">email is required</mat-error>
+                            <mat-error *ngIf="f['email'].errors?.['email']">email is not valid</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" formControlName="password" placeholder="Placeholder"
+                                required>
+                            <mat-error>password is required</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <button type="submit" class="button_login" mat-button color="primary"
+                        (click)="Login()">Login</button>
+                </form>
+            </div>
+        </div>
+        <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape4"></span>
+            <span class="screen__background__shape screen__background__shape3"></span>
+            <span class="screen__background__shape screen__background__shape2"></span>
+            <span class="screen__background__shape screen__background__shape1"></span>
+        </div>
+    </div>
 </div>

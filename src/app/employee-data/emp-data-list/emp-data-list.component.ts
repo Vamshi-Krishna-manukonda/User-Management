@@ -16,7 +16,7 @@ import { DeleteDialogService } from 'src/app/services/delete-dialog.service';
 export class EmpDataListComponent implements OnInit {
 
 
-  displayedColumns: string[] = ['EmpName', 'Email', 'MobileNo', 'Gender', 'D-O-B', 'Designation', 'Comment', 'Actions'];
+  displayedColumns: string[] = ['EmpName', 'Email', 'MobileNo', 'Gender', 'Taskstatus', 'Designation', 'Task', 'Actions'];
   dataSource!: MatTableDataSource<any>
   searchKey!: string;
   @ViewChild(MatPaginator) Paginator!: MatPaginator;
@@ -80,17 +80,18 @@ export class EmpDataListComponent implements OnInit {
   }
 
 
+
   delete(id: number) {
     this._deldialogserv.openConfirmdialog().afterClosed().subscribe(
-      (res)=>{
-        if(res){
+      (res) => {
+        if (res) {
           this._empServe.deleteEmp(id).subscribe(
             {
-              next:(res)=>{
+              next: (res) => {
                 this._notificationserv.warn('Recorddeleted');
                 this.getEmployee();
               },
-              error(err){
+              error(err) {
                 alert('error while deleted')
               }
             }
@@ -104,6 +105,6 @@ export class EmpDataListComponent implements OnInit {
   onClear() {
     this.searchKey = ""
   }
-  
+
 
 }

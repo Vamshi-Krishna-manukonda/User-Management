@@ -14,7 +14,8 @@ export class DialogBoxComponent implements OnInit {
   empForm!: FormGroup;
   ActionBtn: string = 'Save';
   public genderlist = ['Female', 'Male', 'Others'];
-  public empCategory = ['SoftwareDeveloper', 'HumanResource', 'Administration', 'Financial',];
+  public empCategory = ['SoftwareDeveloper', 'HumanResource', 'Administration', 'Financial'];
+  public TaskDetails = ['Assigned', 'UnAssigned','InProgress','Completed'];
   constructor(public empfb: FormBuilder,
     private _empservice: EmployeeService,
     private dialogRef: MatDialogRef<DialogBoxComponent>,
@@ -29,13 +30,12 @@ export class DialogBoxComponent implements OnInit {
       mobileNO: ['',[Validators.required,Validators.minLength(10)]],
       gender: [''],
       category: ['',Validators.required],
-      date: [''],
-      comment: ['']
+      Taskstatus: [''],
+      Task: ['']
     })
-
     // setValues for update
     // console.log(this.editData);
-
+    
     if (this.editData) {
       this.ActionBtn = 'Update'
       this.empForm.controls['empName'].setValue(this.editData.empName);
@@ -44,10 +44,11 @@ export class DialogBoxComponent implements OnInit {
       this.empForm.controls['mobileNO'].setValue(this.editData.mobileNO);
       this.empForm.controls['gender'].setValue(this.editData.gender);
       this.empForm.controls['category'].setValue(this.editData.category);
-      this.empForm.controls['date'].setValue(this.editData.date);
-      this.empForm.controls['comment'].setValue(this.editData.comment);
+      this.empForm.controls['Taskstatus'].setValue(this.editData.Taskstatus);
+      this.empForm.controls['Task'].setValue(this.editData.Task);
     }
-
+    
+    console.log(this.empForm.value);
   }
   get f():{[key:string]:AbstractControl}{
     return this.empForm.controls;
@@ -81,19 +82,21 @@ export class DialogBoxComponent implements OnInit {
 
   // updateEmp
   updateEmp() {
-    this._empservice.putdateEmp(this.empForm.value, this.editData.id).subscribe(
-      {
-        next: (res: any) => {
-          // alert('updare successfully')
-          this.empForm.reset();
-          this.dialogRef.close('Update');
-          this.notificationService.update('update Sucessfully')
-        }, error: () => {
-          alert('error while update');
-        }
+if(this.empForm.valid){
+  this._empservice.putdateEmp(this.empForm.value, this.editData.id).subscribe(
+    {
+      next: (res: any) => {
+        console.log(res);
+        
+        // alert('updare successfully')
+        this.empForm.reset();
+        this.dialogRef.close('Update');
+        this.notificationService.update('update Sucessfully')
+      }, error: () => {
+        alert('error while update');
       }
-    )
+    }
+  )
+}
   }
-
-
 }

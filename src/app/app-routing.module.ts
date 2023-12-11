@@ -7,6 +7,8 @@ import { EmpDataListComponent } from './employee-data/emp-data-list/emp-data-lis
 
 const routes: Routes = [
   { path: "", component: UserLoginComponent },
+  { path: "login", component: UserLoginComponent },
+
   {
     path: "employee", component: employeeDataComponent,
     children: [

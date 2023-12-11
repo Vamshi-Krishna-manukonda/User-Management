@@ -1,0 +1,9 @@
+/* .dialog-box{
+    background: linear-gradient(90deg, #a8dab5, rgba(0, 0, 0, 0.12));
+}
+.addEmployee{
+    background: linear-gradient(90deg, #a8dab5, rgba(0, 0, 0, 0.12));
+} */
+.mat-radio-label-content{
+    display: contents;
+}

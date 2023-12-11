@@ -19,7 +19,7 @@ export class EmployeeService {
   }
   //  update
   putdateEmp(data: any, id: number) {
-    return this._http.put<any>(`${this.baseUrl}/empList` + id,data)
+    return this._http.put<any>(`${this.baseUrl}/empList/${id}` , data)
   }
   // delete
   deleteEmp(id: number) {

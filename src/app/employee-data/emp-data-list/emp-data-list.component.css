@@ -4,9 +4,18 @@
 mat-toolbar button{
   margin:5px
 }
+.header{
+  background-color: #6b94cc;
+}
+.logout-icon{
+  left:0
+}
 .mat-elevation-z8{
   width: 90%;
   margin-left: 70px;
+}
+mat-table{
+  overflow-x:auto;
 }
 .example-spacer {
     flex: 1 1 auto;
@@ -26,11 +35,11 @@ mat-toolbar button{
     margin-left: 10px;
     padding:5px 10px;
     background-color: #ffff;
-    color: red;
+    /* color: red; */
     font-weight: bolder;
   }
   #ne{
-    background-color: #00cbff99;
+    background-color: #c5dbf4bf;
   }
   /* sidenav */
   .example-container{
@@ -39,3 +48,12 @@ mat-toolbar button{
     margin: 10px;
     border: 1px solid #555;
   }
+  .logout{
+    right: 0;
+  }
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #a8dab5, rgba(0, 0, 0, 0.12)); */

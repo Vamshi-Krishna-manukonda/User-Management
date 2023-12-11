@@ -30,7 +30,7 @@
 
             <!-- category -->
             <ng-container matColumnDef="Email">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Category </mat-header-cell>
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Email </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
             </ng-container>
 
@@ -55,16 +55,20 @@
             </ng-container>
 
             <!-- date Column -->
-            <ng-container matColumnDef="D-O-B">
+            <!-- <ng-container matColumnDef="D-O-B">
                 <mat-header-cell *matHeaderCellDef mat-sort-header>Date Of Birth</mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.date | date}} </mat-cell>
+            </ng-container> -->
+            <ng-container matColumnDef="Taskstatus">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Task Status </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.Taskstatus}} </mat-cell>
             </ng-container>
 
 
             <!-- Comment Column -->
-            <ng-container matColumnDef="Comment">
+            <ng-container matColumnDef="Task">
                 <mat-header-cell *matHeaderCellDef mat-sort-header> Comment </mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{element.comment}} </mat-cell>
+                <mat-cell *matCellDef="let element"> {{element.Task}} </mat-cell>
             </ng-container>
 
             <!-- button Actions Column -->

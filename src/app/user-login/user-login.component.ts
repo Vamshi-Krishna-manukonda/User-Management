@@ -57,7 +57,8 @@ export class UserLoginComponent implements OnInit {
           this.AdminLoginForm.reset()
           this.route.navigate(['/employee/emplist']);
           // this.route.navigate(["home"])
-        } else {
+        } 
+        else {
           alert("user not found")
         }
       }, err => {
