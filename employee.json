@@ -20,24 +20,14 @@
   "empList": [
     {
       "empName": "Vamshi Krishna",
-      "email": "vamshi26@gmail.com",
+      "email": "vamshik26@gmail.com",
       "password": "Manu@0126",
       "mobileNO": 9398894863,
       "gender": "Male",
       "category": "SoftwareDeveloper",
       "Taskstatus": "InProgress",
+      "Task": "Raw",
       "id": 1
-    },
-    {
-      "empName": "Shashee",
-      "email": "shashee@gmail.com",
-      "password": "1234",
-      "mobileNO": 9951202151,
-      "gender": "Male",
-      "category": "SoftwareDeveloper",
-      "Taskstatus": "Assigned",
-      "comment": "Asian",
-      "id": 2
     },
     {
       "empName": "Ramya",
@@ -49,6 +39,17 @@
       "Taskstatus": "Completed",
       "Task": "Work done...",
       "id": 3
+    },
+    {
+      "empName": "Seyuu",
+      "email": "sevv@gmail.com",
+      "password": "Seevuu",
+      "mobileNO": 8555236345,
+      "gender": "Female",
+      "category": "Financial",
+      "Taskstatus": "Assigned",
+      "Task": "Financial",
+      "id": 4
     }
   ],
   "employeeData": [

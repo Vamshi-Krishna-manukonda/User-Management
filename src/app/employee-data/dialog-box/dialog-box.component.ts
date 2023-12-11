@@ -28,7 +28,7 @@ export class DialogBoxComponent implements OnInit {
       email: ['',[Validators.required,Validators.email]],
       password: ['',Validators.required],
       mobileNO: ['',[Validators.required,Validators.minLength(10)]],
-      gender: [''],
+      // gender: [''],
       category: ['',Validators.required],
       Taskstatus: [''],
       Task: ['']
@@ -42,7 +42,7 @@ export class DialogBoxComponent implements OnInit {
       this.empForm.controls['email'].setValue(this.editData.email);
       this.empForm.controls['password'].setValue(this.editData.password);
       this.empForm.controls['mobileNO'].setValue(this.editData.mobileNO);
-      this.empForm.controls['gender'].setValue(this.editData.gender);
+      // this.empForm.controls['gender'].setValue(this.editData.gender);
       this.empForm.controls['category'].setValue(this.editData.category);
       this.empForm.controls['Taskstatus'].setValue(this.editData.Taskstatus);
       this.empForm.controls['Task'].setValue(this.editData.Task);

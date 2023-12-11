@@ -7,3 +7,16 @@
 .mat-radio-label-content{
     display: contents;
 }
+.mat-column-select {
+    overflow: initial;
+  }
+  /* .buttonRow{
+    padding: 5px;
+  } */
+  .close-button{
+    padding:5px;
+    /* color: rosybrown !important; */
+  }
+  /* .Action-btn{
+    color: yellow;
+  } */

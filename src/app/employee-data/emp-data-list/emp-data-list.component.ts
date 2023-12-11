@@ -16,7 +16,7 @@ import { DeleteDialogService } from 'src/app/services/delete-dialog.service';
 export class EmpDataListComponent implements OnInit {
 
 
-  displayedColumns: string[] = ['EmpName', 'Email', 'MobileNo', 'Gender', 'Taskstatus', 'Designation', 'Task', 'Actions'];
+  displayedColumns: string[] = ['EmpName', 'Email', 'MobileNo','Taskstatus', 'Designation', 'Task', 'Actions'];
   dataSource!: MatTableDataSource<any>
   searchKey!: string;
   @ViewChild(MatPaginator) Paginator!: MatPaginator;

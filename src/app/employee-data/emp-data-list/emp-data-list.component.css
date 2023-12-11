@@ -10,6 +10,9 @@ mat-toolbar button{
 .logout-icon{
   left:0
 }
+.mat-column-select {
+  overflow: initial;
+}
 .mat-elevation-z8{
   width: 90%;
   margin-left: 70px;

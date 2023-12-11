@@ -23,6 +23,6 @@ export class EmployeeService {
   }
   // delete
   deleteEmp(id: number) {
-    return this._http.delete<any>(`${this.baseUrl}/empList` + id)
+    return this._http.delete<any>(`${this.baseUrl}/empList/${id}`)
   }
 }
