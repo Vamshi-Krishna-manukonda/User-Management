@@ -20,10 +20,9 @@
   "empList": [
     {
       "empName": "Vamshi Krishna",
-      "email": "vamshik26@gmail.com",
+      "email": "vamshikrishna26@gmail.com",
       "password": "Manu@0126",
       "mobileNO": 9398894863,
-      "gender": "Male",
       "category": "SoftwareDeveloper",
       "Taskstatus": "InProgress",
       "Task": "Raw",
@@ -34,7 +33,6 @@
       "email": "Ramya@gmail.com",
       "password": "Ram123",
       "mobileNO": 9655532625,
-      "gender": "Male",
       "category": "SoftwareDeveloper",
       "Taskstatus": "Completed",
       "Task": "Work done...",

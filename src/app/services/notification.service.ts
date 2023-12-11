@@ -12,15 +12,16 @@ export class NotificationService {
   }
   constructor(public matSnackBar: MatSnackBar) { }
   Sucess(message: any) {
-    this.config['panelClass'] = ['notification', 'success'];
-    this.matSnackBar.open(message, 'Ok', this.config)
+    this.config['panelClass'] = ['notification', 'Success'];
+    this.matSnackBar.open(message, '', this.config)
   }
   update(message: any) {
     this.config['panelClass'] = ['notification', 'Success'];
-    this.matSnackBar.open(message, 'ok', this.config)
+    this.matSnackBar.open(message, '', this.config)
   }
   warn(message:any){
     this.config['panelClass']=['notification','warn'];
-    this.matSnackBar.open(message,'ok',this.config)
+    this.matSnackBar.open(message,'',this.config)
   }
+
 }

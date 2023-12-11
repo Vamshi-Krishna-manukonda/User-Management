@@ -7,6 +7,7 @@ import { DialogBoxComponent } from '../dialog-box/dialog-box.component';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { NotificationService } from 'src/app/services/notification.service';
 import { DeleteDialogService } from 'src/app/services/delete-dialog.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-emp-data-list',
@@ -26,7 +27,8 @@ export class EmpDataListComponent implements OnInit {
   constructor(private dialog: MatDialog,
     private _empServe: EmployeeService,
     private _notificationserv: NotificationService,
-    private _deldialogserv: DeleteDialogService
+    private _deldialogserv: DeleteDialogService,
+    private route:Router
   ) { }
 
   ngOnInit(): void {
@@ -59,6 +61,10 @@ export class EmpDataListComponent implements OnInit {
       }
     )
   }
+  //logout
+  logout(){
+    this.route.navigate(['/login'])
+  }
   // filter the data
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -88,7 +94,7 @@ export class EmpDataListComponent implements OnInit {
           this._empServe.deleteEmp(id).subscribe(
             {
               next: (res) => {
-                this._notificationserv.warn('Recorddeleted');
+                this._notificationserv.warn('Record deleted');
                 this.getEmployee();
               },
               error(err) {

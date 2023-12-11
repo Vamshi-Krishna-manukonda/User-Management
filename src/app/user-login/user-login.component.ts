@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
+import { NotificationService } from '../services/notification.service';
 
 @Component({
   selector: 'app-user-login',
@@ -14,7 +15,8 @@ export class UserLoginComponent implements OnInit {
   // admLoginDynamicArray: any = [];
   constructor(private ls: LoginService,
     private fb: FormBuilder,
-    private route: Router) { }
+    private route: Router,
+    private NotiService:NotificationService) { }
 
   ngOnInit(): void {
     this.AdminLoginForm = this.fb.group({
@@ -53,16 +55,17 @@ export class UserLoginComponent implements OnInit {
           return a.Email === this.AdminLoginForm.value.email && a.Password === this.AdminLoginForm.value.password
         });
         if (user) {
-          alert('Login Succesful');
+          this.NotiService.Sucess('Loggedin Successfully')
+          // alert('Login Succesful');
           this.AdminLoginForm.reset()
           this.route.navigate(['/employee/emplist']);
           // this.route.navigate(["home"])
         } 
         else {
-          alert("user not found")
+          this.NotiService.warn('Please Enter Valid Details')
         }
       }, err => {
-        alert("Something went wrong")
+        this.NotiService.warn('Something Went Wrong')
       },
       )
     // const AdminLogin = res.find((a: any) => {
