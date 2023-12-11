@@ -7,8 +7,8 @@ mat-toolbar button{
 .header{
   background-color: #6b94cc;
 }
-.logout-icon{
-  left:0
+.logout{
+  right: 0;
 }
 .mat-column-select {
   overflow: initial;
