@@ -84,9 +84,6 @@ export class EmpDataListComponent implements OnInit {
       }
     })
   }
-
-
-
   delete(id: number) {
     this._deldialogserv.openConfirmdialog().afterClosed().subscribe(
       (res) => {

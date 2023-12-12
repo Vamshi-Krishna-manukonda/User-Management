@@ -68,9 +68,15 @@ export class DialogBoxComponent implements OnInit {
               // alert('postdata Success');c
               this.empForm.reset();
               this.dialogRef.close('Save');
-              this.notificationService.Sucess('Record success fully Posted')
+              if(res){
+                this.notificationService.Sucess('Record success fully Posted')
+              }
+                else {
+                  this.notificationService.warn('Please Enter Valid Details')
+                }
+              
             }, error: (err: any) => {
-              alert('error while post data');
+              this.notificationService.warn('Something Went Wrong');
             }
           }
         )

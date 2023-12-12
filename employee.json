@@ -15,6 +15,15 @@
       "ConfirmPassword": "1234",
       "Terms&Conditions": "",
       "id": 1
+    },
+    {
+      "FirstName": "shri",
+      "LastName": "Ram",
+      "Email": "Ram@gmail.com",
+      "Password": "456789",
+      "ConfirmPassword": "456789",
+      "Terms&Conditions": "",
+      "id": 1
     }
   ],
   "empList": [
@@ -48,6 +57,16 @@
       "Taskstatus": "Assigned",
       "Task": "Financial",
       "id": 4
+    },
+    {
+      "empName": "Rakshith",
+      "email": "Rakshith@gmail.com",
+      "password": "Rakhi",
+      "mobileNO": 9658889664,
+      "category": "HumanResource",
+      "Taskstatus": "InProgress",
+      "Task": "",
+      "id": 5
     }
   ],
   "employeeData": [
