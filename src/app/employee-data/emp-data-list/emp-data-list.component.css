@@ -54,9 +54,6 @@ mat-table{
   .logout{
     right: 0;
   }
-
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(90deg, #a8dab5, rgba(0, 0, 0, 0.12)); */
+  .edit-button{
+    color: #6b94cc;
+  }

@@ -6,7 +6,8 @@
     <span>Employee Management System</span>
     <span class="example-spacer"></span>
     <span class="logout">
-        <button mat-icon-button class="example-icon" matTooltip="Logout" (click)="logout()" aria-label="Example icon-button with menu icon">
+        <button mat-icon-button class="example-icon" matTooltip="Logout" (click)="logout()"
+            aria-label="Example icon-button with menu icon">
             <mat-icon>logout</mat-icon>
         </button>
     </span>
@@ -20,11 +21,13 @@
             <mat-form-field appearance="outline" class="mySerachFormfield">
                 <mat-label>Filter</mat-label>
                 <input matInput [(ngModel)]="searchKey" (keyup)="applyFilter($event)" placeholder="Ex ..." #input>
-                <button mat-icon-button matSuffix  autocomplete="off" aria-label="Clear" *ngIf="searchKey" (click)="onClear()">
+                <button mat-icon-button matSuffix autocomplete="off" aria-label="Clear" *ngIf="searchKey"
+                    (click)="onClear()">
                     <mat-icon>close</mat-icon>
                 </button>
             </mat-form-field>
         </div>
+
         <mat-table [dataSource]="dataSource" matSort>
             <!-- ProductName Column -->
             <ng-container matColumnDef="EmpName">
@@ -33,43 +36,31 @@
             </ng-container>
 
             <!-- category -->
+
             <ng-container matColumnDef="Email">
                 <mat-header-cell *matHeaderCellDef mat-sort-header class="col-padding"> Email </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
             </ng-container>
+
 
             <!-- MobileNo -->
             <ng-container matColumnDef="MobileNo">
                 <mat-header-cell *matHeaderCellDef mat-sort-header class="col-padding">MobileNo</mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.mobileNO}} </mat-cell>
             </ng-container>
-
-
-            <!-- gender Column -->
-            <!-- <ng-container matColumnDef="Gender">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Gender </mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{element.gender}} </mat-cell>
-            </ng-container> -->
-
-
-            <!-- gender Column -->
+            <!--Designation-->
             <ng-container matColumnDef="Designation">
                 <mat-header-cell *matHeaderCellDef mat-sort-header class="col-padding"> Category </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.category}} </mat-cell>
             </ng-container>
-
-            <!-- date Column -->
-            <!-- <ng-container matColumnDef="D-O-B">
-                <mat-header-cell *matHeaderCellDef mat-sort-header>Date Of Birth</mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{element.date | date}} </mat-cell>
-            </ng-container> -->
+            <!--Task Status-->
             <ng-container matColumnDef="Taskstatus">
                 <mat-header-cell *matHeaderCellDef mat-sort-header class="col-padding"> Task Status </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.Taskstatus}} </mat-cell>
             </ng-container>
 
 
-            <!-- Comment Column -->
+            <!--Task Column -->
             <ng-container matColumnDef="Task">
                 <mat-header-cell *matHeaderCellDef mat-sort-header class="col-padding"> Task </mat-header-cell>
                 <mat-cell *matCellDef="let element"> {{element.Task}} </mat-cell>
@@ -77,7 +68,7 @@
 
             <!-- button Actions Column -->
             <ng-container matColumnDef="Actions">
-                <mat-header-cell *matHeaderCellDef  class="col-padding">Actions</mat-header-cell>
+                <mat-header-cell *matHeaderCellDef class="col-padding">Actions</mat-header-cell>
                 <mat-cell *matCellDef="let element">
                     <button mat-icon-button class="edit-button" (click)="editEmp(element)" matTooltip="Edit">
                         <mat-icon>edit</mat-icon>
