@@ -29,7 +29,7 @@
   "empList": [
     {
       "empName": "Vamshi Krishna",
-      "email": "vamshikrishna26@gmail.com",
+      "email": "vamshi26@gmail.com",
       "password": "Manu@0126",
       "mobileNO": 9398894863,
       "category": "SoftwareDeveloper",
@@ -69,133 +69,7 @@
       "id": 5
     }
   ],
-  "employeeData": [
-    {
-      "FirstName": "Lokesh",
-      "Email": "lokesh@gmail.com",
-      "Password": "1234",
-      "Gender": "Male",
-      "PhoneNumber": "9398810150",
-      "Interests": "Angular",
-      "id": 1
-    }
-  ],
-  "registerForm": [
-    {
-      "ID": "FirstName",
-      "Label": "First Name",
-      "Type": "input",
-      "type": "text",
-      "value": "",
-      "isActive": true
-    },
-    {
-      "ID": "LastName",
-      "Label": "Last Name",
-      "Type": "input",
-      "type": "text",
-      "value": "",
-      "isActive": true
-    },
-    {
-      "ID": "Email",
-      "Label": "Email",
-      "Type": "input",
-      "type": "email",
-      "value": "",
-      "isActive": true
-    },
-    {
-      "ID": "Password",
-      "Label": "Password",
-      "Type": "input",
-      "type": "password",
-      "value": "",
-      "isActive": true
-    },
-    {
-      "ID": "ConfirmPassword",
-      "Label": "ConfirmPassword",
-      "Type": "input",
-      "type": "password",
-      "value": "",
-      "isActive": true
-    },
-    {
-      "ID": "Terms&Conditions",
-      "Label": "Terms&Conditions",
-      "Type": "checkbox",
-      "type": "checkbox",
-      "value": "",
-      "isActive": true
-    }
-  ],
-  "adminLoginForm": [
-    {
-      "ID": "Email",
-      "Label": "Email",
-      "Type": "input",
-      "type": "email",
-      "value": "",
-      "isActive": true
-    },
-    {
-      "ID": "Password",
-      "Label": "Password",
-      "Type": "input",
-      "type": "password",
-      "value": "",
-      "isActive": true
-    }
-  ],
-  "employeeRegister": [
-    {
-      "ID": "FirstName",
-      "Label": "First Name",
-      "Type": "input",
-      "type": "text",
-      "value": "",
-      "isActive": true
-    },
-    {
-      "ID": "Email",
-      "Label": "Email",
-      "Type": "input",
-      "type": "email",
-      "value": "",
-      "isActive": true
-    },
-    {
-      "ID": "Password",
-      "Label": "Password",
-      "Type": "input",
-      "type": "password",
-      "value": "",
-      "isActive": true
-    },
-    {
-      "ID": "Gender",
-      "Label": "Gender",
-      "Type": "radio",
-      "value": "FeMale,Male",
-      "isActive": true
-    },
-    {
-      "ID": "PhoneNumber",
-      "Label": "Phone Number",
-      "Type": "input",
-      "type": "number",
-      "value": "",
-      "isActive": true
-    },
-    {
-      "ID": "Interests",
-      "Label": "Interests",
-      "Type": "select",
-      "value": "Html,Css,Js,BootStrap,TypeScript,Angular,AngularMaterial",
-      "isActive": true
-    }
-  ],
+
   "comments": [
     {
       "id": 1,
